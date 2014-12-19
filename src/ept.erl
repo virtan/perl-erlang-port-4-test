@@ -22,11 +22,15 @@ test(N) ->
             io:format("port closed~n", []);
         {Port, {data, Data}} ->
             Data1 = binary_to_term(Data),
-            case size(Data1) of
+            S = case is_list(Data1) of
+                    true -> length(Data1);
+                    _ -> size(Data1)
+                end,
+            case S of
                 X when X < 15 ->
                     io:format("port returned: ~p~n", [Data1]);
                 _ ->
-                    io:format("port returned: tuple of ~b elements~n", [size(Data1)])
+                    io:format("port returned: tuple of ~b elements~n", [S])
             end;
         {'EXIT', Port, Reason} ->
             io:format("port exited: ~p~n", [Reason])
