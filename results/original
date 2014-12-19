@@ -1,0 +1,26 @@
+1> ept:test(400000).
+data generated: list of 400000 elements
+port returned: tuple of 400000 elements
+400000 elements, 345055 ms, 1159 els/sec
+true
+
+
+Total Elapsed Time = 327.3110 Seconds
+  User+System Time = 326.3130 Seconds
+Exclusive Times
+%Time ExclSec CumulS #Calls sec/call Csec/c  Name
+ 97.0   316.5 319.62      1   316.51 319.61  Erlang::Port4::decode
+ 2.63   8.581  8.581      3   2.8605 2.8605  Erlang::Port4::_read_exact
+ 0.95   3.105  3.105 400000   0.0000 0.0000  Erlang::Port4::_newBinary
+ 0.62   2.027 10.608      2   1.0134 5.3040  Erlang::Port4::_read_cmd
+ 0.11   0.361  0.104 400001   0.0000 0.0000  Erlang::Port4::_encode
+ 0.06   0.183  0.356      1   0.1829 0.3558  main::extract_data
+ 0.05   0.173  0.173 400000   0.0000 0.0000  Erlang::Port4::to_s
+ 0.04   0.123  0.093      1   0.1234 0.0935  Erlang::Port4::_encode_list
+ 0.03   0.102 330.83      1   0.1015 330.83  Erlang::Port4::loop
+ 0.01   0.041  0.145      1   0.0412 0.1452  Erlang::Port4::encode
+ 0.00   0.002  0.002      2   0.0012 0.0012  Erlang::Port4::BEGIN
+ 0.00   0.002  0.005      1   0.0022 0.0046  main::BEGIN
+ 0.00   0.000  0.000      1   0.0000 0.0000  warnings::import
+ 0.00   0.000  0.000      1   0.0000 0.0000  strict::import
+ 0.00   0.000  0.000      1   0.0000 0.0000  Erlang::Port4::_newTuple

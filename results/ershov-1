@@ -1,0 +1,27 @@
+1> ept:test(400000).
+data generated: list of 400000 elements
+Use of uninitialized value in substr at /opt/local/lib/perl5/site_perl/5.12.5/Erlang/Port4.pm line 178.
+                                                                                                       port returned: tuple of 400000 elements
+400000 elements, 29483 ms, 13793 els/sec
+true
+
+Total Elapsed Time = 7.035220 Seconds
+  User+System Time = 6.910009 Seconds
+Exclusive Times
+%Time ExclSec CumulS #Calls sec/call Csec/c  Name
+ 100.   6.935  6.935      3   2.3116 2.3116  Erlang::Port4::_read_exact
+ 21.3   1.477  1.883 160000   0.0000 0.0000  Erlang::Port4::__ANON__
+ 20.7   1.434  8.369      2   0.7172 4.1846  Erlang::Port4::_read_cmd
+ 17.3   1.201  1.820 400001   0.0000 0.0000  Erlang::Port4::_encode
+ 10.5   0.727  2.610      1   0.7269 2.6102  Erlang::Port4::decode
+ 5.88   0.406  0.406 400000   0.0000 0.0000  Erlang::Port4::_newBinary
+ 4.62   0.319  1.810      1   0.3191 1.8098  Erlang::Port4::_encode_list
+ 4.56   0.315  0.614      1   0.3146 0.6137  main::extract_data
+ 4.34   0.300  0.300 200000   0.0000 0.0000  UNIVERSAL::isa
+ 4.33   0.299  0.299 400000   0.0000 0.0000  Erlang::Port4::to_s
+ 1.36   0.094 13.545      1   0.0941 13.544  Erlang::Port4::loop
+ 0.54   0.037  1.858      1   0.0372 1.8576  Erlang::Port4::encode
+ 0.03   0.002  0.002      2   0.0009 0.0009  Erlang::Port4::BEGIN
+ 0.03   0.002  0.003      1   0.0016 0.0034  main::BEGIN
+ 0.00   0.000  0.000      1   0.0000 0.0000  Erlang::Port4::_newTuple
+
