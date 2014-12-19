@@ -1,0 +1,12 @@
+{application, ept,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { ept_app, []}},
+  {env, []}
+ ]}.
