@@ -13,7 +13,9 @@ test(N) ->
     end,
     process_flag(trap_exit, true),
     Port = erlang:open_port({spawn_executable, "priv/test.pl"}, [{packet, 4}, binary]),
-    Port ! {self(), {command, term_to_binary(Obj)}},
+    ToSend = term_to_binary(Obj),
+    io:format("serialized data size: ~b bytes~n", [size(ToSend)]),
+    Port ! {self(), {command, ToSend}},
     Begin = os:timestamp(),
     receive
         {Port, closed} ->
